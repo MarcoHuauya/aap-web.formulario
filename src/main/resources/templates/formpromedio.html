@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link th:href="@{/styles/bootstrap/bootstrap.css}" rel="stylesheet">
+    <script th:src ="@{/script/bootstrap/bootstrap.bundle.js}" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div class="card">
+    <div class="card-header">
+        Calculo de Promedio - Cibertec
+    </div>
+    <div class="card-body">
+
+        <form>
+
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control"
+                       id="txtcl1"
+                       placeholder="name@example.com">
+                <label for="txtcl1">Ingrese Nota del Cl1</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control"
+                       id="txtcl2"
+                       placeholder="name@example.com">
+                <label for="txtcl2">Ingrese Nota del Cl2</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control"
+                       id="txtcl3"
+                       placeholder="name@example.com">
+                <label for="txtcl3">Ingrese Nota del Cl3</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control"
+                       id="txtprofin"
+                       placeholder="name@example.com">
+                <label for="txtprofin">Ingrese Nota del Proyecto Final</label>
+            </div>
+
+            <button type="submit" class="btn btn-success">Calcular</button>
+            <hr />
+
+            <div class="alert alert-warning" role="alert">
+                A simple warning alert—check it out!
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
