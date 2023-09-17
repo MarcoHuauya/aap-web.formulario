@@ -16,38 +16,43 @@
     </div>
     <div class="card-body">
 
-        <form>
+        <form th:action="@{/promedionotas}" method="post"
+              th:object="${promediomodel}">
 
             <div class="form-floating mb-3">
                 <input type="number" class="form-control"
                        id="txtcl1"
-                       placeholder="name@example.com">
+                       placeholder="name@example.com"
+                th:field="*{cl1}">
                 <label for="txtcl1">Ingrese Nota del Cl1</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="number" class="form-control"
                        id="txtcl2"
-                       placeholder="name@example.com">
+                       placeholder="name@example.com"
+                       th:field="*{cl2}">
                 <label for="txtcl2">Ingrese Nota del Cl2</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="number" class="form-control"
                        id="txtcl3"
-                       placeholder="name@example.com">
+                       placeholder="name@example.com"
+                       th:field="*{cl3}">
                 <label for="txtcl3">Ingrese Nota del Cl3</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="number" class="form-control"
                        id="txtprofin"
-                       placeholder="name@example.com">
+                       placeholder="name@example.com"
+                       th:field="*{profin}">
                 <label for="txtprofin">Ingrese Nota del Proyecto Final</label>
             </div>
 
             <button type="submit" class="btn btn-success">Calcular</button>
             <hr />
 
-            <div class="alert alert-warning" role="alert">
-                A simple warning alert—check it out!
+            <div th:if="${verresultado}" class="alert alert-warning" role="alert">
+                <span th:text="${resultado} ?:''"></span>
             </div>
 
         </form>
